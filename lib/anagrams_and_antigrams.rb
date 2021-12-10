@@ -1,7 +1,7 @@
 require("pry")
 require 'dictionary_lookup'
 
-class Antigram
+class Anagram
   attr_accessor(:word1)
   attr_accessor(:word2)
 
