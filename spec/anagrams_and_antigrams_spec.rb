@@ -42,4 +42,13 @@ describe('#Anagram') do
   it("should return array of words found in dictionary") do
     expect(obj5.word_lookup("hello")).to(eql(1))
   end
+  it("should return false for hi palindrome") do
+    expect(obj5.is_palindrome?("hi")).to(eql(false))
+  end
+  it("should return true for kayak palindrome") do
+    expect(obj5.is_palindrome?("kayak")).to(eql(true))
+  end
+  it("should return true for kayak radar kayak palindrome") do
+    expect(obj5.is_palindrome?("kayak radar kayak")).to(eql(true))
+  end
 end

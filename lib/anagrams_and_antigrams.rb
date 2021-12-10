@@ -13,11 +13,6 @@ class Anagram
     @word2 = word2.downcase
   end
 
-  # def palindrome_checker
-  #   word1_pal=  Palindrome.is_palindrome?
-  #   word1_pal=
-  # end
-
   def word_lookup(word)
     results = DictionaryLookup::Base.define(word)
     results.count
