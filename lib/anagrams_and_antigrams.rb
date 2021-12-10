@@ -38,6 +38,8 @@ class Antigram
 
   def anagram_checker
     same=false
+    @word1=@word1.gsub(/[^a-z0-9]/,'').downcase
+    @word2=@word2.gsub(/[^a-z0-9]/,'').downcase
     arr1 = @word1.split("").sort
     arr2 = @word2.split("").sort
     for i in 0..arr1.length-1 do
