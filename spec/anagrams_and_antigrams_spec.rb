@@ -7,7 +7,7 @@ describe('#Antigram') do
   obj3 = Antigram.new("ate","teak")
   obj4 = Antigram.new("ktk","tkk")
   obj5 = Antigram.new("hello","pulp")
-  obj6 = Antigram.new("pike","multnomah")
+  obj6 = Antigram.new("nap","icky")
   obj7 = Antigram.new("i like tea too","o, i like to eat")
   it("should return 'These words are anagrams' if two words are anagrams") do
     expect(obj1.anagram_checker).to(eql("These words are anagrams"))
