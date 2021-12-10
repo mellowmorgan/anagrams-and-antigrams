@@ -1,36 +1,35 @@
-# {Application Name}
+# Anagrams and Antigrams Project
 
-#### Created By _**{Name}**_
+#### Created By _Morgan Waites_
 
-#### _An application to_
+#### _A program to check for anagrams and antigrams_
 
 ## Technologies Used
 
-* _Ruby_
-* _RSpec_
-* _IRB_
-* _Pry_
+* ruby
+* gems
+* rspec
+* pry
+* dictionary_lookup
 
 ## Description
 
-_This project was created for Epicodus bootcamp to show proficiency in. The application is for . The user can ._
+This program has a class Anagram with methods to check for anagrams, antigrams, and uses dictionary_lookup gem to make sure words/phrase agruments are valid. The script file takes user input to implement the class and its methods from the terminal.
 
 ## Setup/Installation Requirements
 
-* _Clone the GitHub [repository]({github repository}) or download and open the Zip on your local machine.
+* In terminal, navigate to directory of where you'd like project to be and type 'git clone https://github.com/mellowmorgan/anagrams-and-antigrams.git'
+* Type 'bundle install'
+* Type ruby anagram_script.rb to run program in terminal
+* To run tests, type rspec
+* If enter key produces ^M, exit out of script with CTRL+C and in terminal type 'stty sane' hit enter then re-run script (this is a common problem in terminal and stty sane should fix some terminal oddities)
 
 ## Known Bugs
 
-_None at this time_
-
-## Future Updates
-
-* __
+* Allows users to input numbers
+* Limitations of dictionary_lookup gem. It does not account for all plurals and tenses of words and result will say it is not a word in certain cases, even if it is. 
 
 ## License
 
-_[MIT](https://opensource.org/licenses/MIT)_
-Copyright (c) _2021_ _{Name}_
-
-## Support and Contact Details
-* _[{email}](mailto:{email})_
+[MIT](https://opensource.org/licenses/MIT)
+Copyright (c) 2021 Morgan Waites
