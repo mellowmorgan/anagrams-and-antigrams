@@ -6,8 +6,8 @@ class Anagram
   attr_accessor(:word2)
 
   def initialize(word1,word2)
-    @word1 = word1
-    @word2 = word2
+    @word1 = word1.downcase
+    @word2 = word2.downcase
   end
 
   def word_lookup(word)
@@ -41,8 +41,8 @@ class Anagram
 
   def anagram_checker
     same=false
-    word1_no_space=@word1.gsub(/[^a-z0-9]/,'').downcase
-    word2_no_space=@word2.gsub(/[^a-z0-9]/,'').downcase
+    word1_no_space=@word1.gsub(/[^a-z0-9]/,'')
+    word2_no_space=@word2.gsub(/[^a-z0-9]/,'')
     arr1 = word1_no_space.split("").sort
     arr2 = word2_no_space.split("").sort
     for i in 0..arr1.length-1 do
@@ -54,7 +54,9 @@ class Anagram
       'These words are anagrams' 
     else
       if !are_words?
-        'These are not words at all'
+        'One of both of these are not words at all'
+      elsif word1_no_space=="" || word2_no_space==""
+        'Please enter something'
       elsif antigram? 
         'These words have no letter matches and are antigrams.'
       else
@@ -62,6 +64,4 @@ class Anagram
       end
     end
   end
-
-  
 end

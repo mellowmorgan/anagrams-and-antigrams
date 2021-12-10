@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
-require ("lib/anagrams_and_antigrams.rb")
+require ('./lib/anagrams_and_antigrams')
+
 puts "******************"
 puts "Anagram and Antigram Checker"
 puts "Enter 'quit' at any time to exit"
@@ -18,7 +19,11 @@ while(input!="quit")
     break
   end
   word2=input
-  
+  obj=Anagram.new(word1,word2)
+  result = obj.anagram_checker
+  puts result
+  puts
+
 end
 
 
