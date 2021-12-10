@@ -27,7 +27,7 @@ class Antigram
     end
   end
 
-  def antigram_checker
+  def anagram_checker
     same=false
     arr1 = @word1.split("").sort
     arr2 = @word2.split("").sort
