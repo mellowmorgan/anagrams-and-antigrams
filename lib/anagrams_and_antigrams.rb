@@ -1,9 +1,16 @@
 require("pry")
+require 'dictionary_lookup'
+
 
 class Antigram
   attr_accessor(:word1)
   attr_accessor(:word2)
   
+  def word_lookup(word)
+    results = DictionaryLookup::Base.define(word)
+    results.count
+  end
+
   def initialize(word1,word2)
     @word1 = word1
     @word2 = word2

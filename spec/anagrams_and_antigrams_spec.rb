@@ -36,4 +36,10 @@ describe('#Antigram') do
   it("should return they are antigrams") do
     expect(obj7.anagram_checker).to(eql("These words are anagrams"))
   end
+  it("should return array of words found in dictionary") do
+    expect(obj5.word_lookup("hellop")).to(eql(0))
+  end
+  it("should return array of words found in dictionary") do
+    expect(obj5.word_lookup("hello")).to(eql(1))
+  end
 end
