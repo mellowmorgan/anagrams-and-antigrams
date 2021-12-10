@@ -1,7 +1,10 @@
 require("pry")
 require 'dictionary_lookup'
+require 'palindrome'
 
 class Anagram
+  include Palindrome
+
   attr_accessor(:word1)
   attr_accessor(:word2)
 
@@ -9,6 +12,11 @@ class Anagram
     @word1 = word1.downcase
     @word2 = word2.downcase
   end
+
+  # def palindrome_checker
+  #   word1_pal=  Palindrome.is_palindrome?
+  #   word1_pal=
+  # end
 
   def word_lookup(word)
     results = DictionaryLookup::Base.define(word)
