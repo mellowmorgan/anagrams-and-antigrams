@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require ('./lib/anagrams_and_antigrams')
 
+
 puts "******************"
 puts "Anagram and Antigram Checker"
 puts "Enter 'quit' at any time to exit"

@@ -1,6 +1,6 @@
 require("pry")
 require ('dictionary_lookup')
-require ('palindrome')
+require_relative ('palindrome')
 
 class Anagram
   include Palindrome
