@@ -22,8 +22,10 @@ while(input!="quit")
   obj=Anagram.new(word1,word2)
   result = obj.anagram_checker
   puts result
+  if (obj.put_palindromes)
+    puts obj.put_palindromes
+  end
   puts
-
 end
 
 

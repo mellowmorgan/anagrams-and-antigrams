@@ -1,6 +1,6 @@
 require("pry")
-require 'dictionary_lookup'
-require 'palindrome'
+require ('dictionary_lookup')
+require ('palindrome')
 
 class Anagram
   include Palindrome
@@ -41,7 +41,19 @@ class Anagram
     end
     true
   end
-
+  def put_palindromes
+    word1_no_space=@word1.gsub(/[^a-z0-9]/,'')
+    word2_no_space=@word2.gsub(/[^a-z0-9]/,'')
+    if is_palindrome?(word1_no_space) && is_palindrome?(word2_no_space)
+      "#{word1} and #{word2} are palindromes" 
+    elsif is_palindrome?(word1_no_space)
+      "#{word1} is a palindrome"
+    elsif is_palindrome?(word2_no_space)
+      "#{word2} is a palindrome"  
+    else
+      false
+    end
+  end
   def anagram_checker
     same=false
     word1_no_space=@word1.gsub(/[^a-z0-9]/,'')
