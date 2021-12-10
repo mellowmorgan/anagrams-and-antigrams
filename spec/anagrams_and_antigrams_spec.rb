@@ -29,4 +29,7 @@ describe('#Antigram') do
   it("should return true") do
     expect(obj6.antigram?).to(eql(true))
   end
+  it("should return they are antigrams") do
+    expect(obj6.anagram_checker).to(eql('These words have no letter matches and are antigrams.'))
+  end
 end

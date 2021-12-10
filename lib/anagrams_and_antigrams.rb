@@ -26,25 +26,6 @@ class Antigram
       false
     end
   end
-
-  def anagram_checker
-    same=false
-    arr1 = @word1.split("").sort
-    arr2 = @word2.split("").sort
-    for i in 0..arr1.length-1 do
-      if arr1[i]==arr2[i]
-        same=true
-      else 
-        return 'These words are NOT anagrams'
-      end
-    end
-    if same && @word1.length==@word2.length && are_words?
-      'These words are anagrams'
-    else
-      'These words are NOT anagrams'
-    end
-  end
-
   def antigram?
     word1_arr = @word1.split("")
     word1_arr.each do |letter|
@@ -54,4 +35,26 @@ class Antigram
     end
     true
   end
+
+  def anagram_checker
+    same=false
+    arr1 = @word1.split("").sort
+    arr2 = @word2.split("").sort
+    for i in 0..arr1.length-1 do
+      if arr1[i]==arr2[i]
+        same=true
+      end
+    end
+    if same && @word1.length==@word2.length && are_words?
+      'These words are anagrams'
+    else
+      if antigram?
+        'These words have no letter matches and are antigrams.'
+      else
+        'These words are NOT anagrams'
+      end
+    end
+  end
+
+  
 end
