@@ -16,12 +16,12 @@ class Antigram
   end
 
   def are_words?
-    @word1.gsub(/[^a-z0-9 ]/,'').split.each do |word|
+    @word1.gsub(/[^a-z0-9 ]/,'').split(" ").each do |word|
       if word_lookup(word)==0
         return false
       end
     end
-    @word2.gsub(/[^a-z0-9 ]/,'').split.each do |word|
+    @word2.gsub(/[^a-z0-9 ]/,'').split(" ").each do |word|
       if word_lookup(word)==0
         return false
       end
@@ -40,18 +40,17 @@ class Antigram
   end
 
   def anagram_checker
-
     same=false
-    @word1=@word1.gsub(/[^a-z0-9]/,'').downcase
-    @word2=@word2.gsub(/[^a-z0-9]/,'').downcase
-    arr1 = @word1.split("").sort
-    arr2 = @word2.split("").sort
+    word1_no_space=@word1.gsub(/[^a-z0-9]/,'').downcase
+    word2_no_space=@word2.gsub(/[^a-z0-9]/,'').downcase
+    arr1 = word1_no_space.split("").sort
+    arr2 = word2_no_space.split("").sort
     for i in 0..arr1.length-1 do
       if arr1[i]==arr2[i]
         same=true
       end
     end
-    if same && @word1.length==@word2.length && are_words?
+    if same && word1_no_space.length==word2_no_space.length && are_words?
       'These words are anagrams' 
     else
       if !are_words?
