@@ -6,6 +6,8 @@ describe('#Antigram') do
   obj2 = Antigram.new("ate","tea")
   obj3 = Antigram.new("ate","teak")
   obj4 = Antigram.new("ktk","tkk")
+  obj5 = Antigram.new("hello","pulp")
+  obj6 = Antigram.new("pike","multnomah")
   it("should return 'These words are anagrams' if two words are anagrams") do
     expect(obj1.anagram_checker).to(eql("These words are anagrams"))
   end
@@ -21,5 +23,10 @@ describe('#Antigram') do
   it("should return true") do
     expect(obj2.are_words?).to(eql(true))
   end
-  
+  it("should return true") do
+    expect(obj5.antigram?).to(eql(false))
+  end
+  it("should return true") do
+    expect(obj6.antigram?).to(eql(true))
+  end
 end

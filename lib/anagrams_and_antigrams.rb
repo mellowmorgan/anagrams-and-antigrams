@@ -44,4 +44,14 @@ class Antigram
       'These words are NOT anagrams'
     end
   end
+
+  def antigram?
+    word1_arr = @word1.split("")
+    word1_arr.each do |letter|
+      if @word2.include?(letter)
+        return false
+      end
+    end
+    true
+  end
 end
