@@ -20,6 +20,8 @@ class Antigram
         return 'These words are NOT anagrams'
       end
     end
+    if same && @word1.length==@word2.length
     'These words are anagrams'
+    end
   end
 end
