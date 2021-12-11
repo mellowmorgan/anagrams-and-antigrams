@@ -63,6 +63,9 @@ class Anagram
     for i in 0..arr1.length-1 do
       if arr1[i]==arr2[i]
         same=true
+      else
+        same=false
+        break
       end
     end
     if same && word1_no_space.length==word2_no_space.length && are_words?

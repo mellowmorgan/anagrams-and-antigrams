@@ -58,6 +58,9 @@ describe('#Anagram') do
   it("should return they are palindromes for put_palindrome called on obj8") do
     expect(obj8.put_palindromes).to(eql( "kayak and radar are palindromes" ))
   end
+  it("should return false for obj8 obj1.anagram_checker") do
+    expect(obj8.anagram_checker).to(eql("These words are NOT anagrams"))
+  end
 end
 
 
