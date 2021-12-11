@@ -14,7 +14,7 @@
 
 ## Description
 
-This program has a class Anagram with methods to check for anagrams, antigrams, and uses dictionary_lookup gem to make sure words/phrase agruments are valid. The script file takes user input to implement the class and its methods from the terminal.
+This program has a class Anagram with methods to check for anagrams, antigrams, and uses dictionary_lookup gem to make sure words/phrase agruments are valid. It also has a module Palindrome for checking for palindromes. The script file takes user input to implement the class and its methods from the terminal.
 
 ## Setup/Installation Requirements
 
